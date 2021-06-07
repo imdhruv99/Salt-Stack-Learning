@@ -4,7 +4,7 @@
 ## Configure Salt Master
 
 
-	#### Setup Salt repository and update local repo
+- **Setup Salt repository and update local repo**
 
 	```
 	wget -O - https://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -
@@ -12,13 +12,13 @@
 	sudo apt-get update
 	```
 
-	#### Salt Master installation, cloud and doc
+- **Salt Master installation, cloud and doc**
 
 	```
 	sudo apt-get install salt-master salt-cloud salt-doc
 	```
 
-	#### Creating Folder Structure
+- **Creating Folder Structure**
 
 	```
 	mkdir -p {keys,pillar,reactor,salt,cloud}
@@ -29,7 +29,7 @@
 
 ## Configure Salt Minions
 
-	#### Setup Salt repository and update local repo
+- **Setup Salt repository and update local repo**
 
 	```
 	wget -O - https://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -
@@ -37,7 +37,7 @@
 	sudo apt-get update
 	```
 
-	#### Salt Minion installation
+- **Salt Minion installation**
 
 	```
 	sudo apt-get install salt-minion
