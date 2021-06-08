@@ -82,3 +82,32 @@ search for `master:salt` and update the salt with ip of you salt-master.
 
 - **Restart the salt-minion**
     `sudo /etc/init.d/salt-minion restart`
+
+- **Now, Check again on Salt master**
+    `sudo salt-key -L`
+    ```
+    Accepted Keys:
+    Denied Keys:
+    Unaccepted Keys:
+    minion01
+    Rejected Keys
+    ```
+
+- **Add Unaccepted keys to salt master**
+    `sudo salt-key -a minion01`
+    Now, it should show under Accepted Key as below:
+    ```
+    Accepted Keys:
+    minion01
+    Denied Keys:
+    Unaccepted Keys:
+    Rejected Keys
+    ```
+
+- **Test the connection using below command**
+    `sudo salt '*' test.ping`
+    It should return as below:
+    ```
+    minion01:
+        True
+    ```
